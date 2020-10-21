@@ -1,0 +1,90 @@
+Script started on 2020-03-27 19:08:21-0400
+]0;tengmin1@nxsrv:/h/u3/c7/05/tengmin1/Desktop/tengmin1/lab10nxsrv:~/Desktop/tengmin1/lab10$ gdb randclient
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from randclient...done.
+(gdb) break main
+Breakpoint 1 at 0xc69: file randclient.c, line 24.
+(gdb) run 127.0.0.1
+Starting program: /h/u3/c7/05/tengmin1/Desktop/tengmin1/lab10/randclient 127.0.0.1
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffe708) at randclient.c:24
+24	    if (argc != 2) {
+(gdb) 
+(gdb) next
+29	    int soc = connect_to_server(PORT, argv[1]);
+(gdb) 
+connect: Connection refused
+[Inferior 1 (process 53558) exited with code 01]
+(gdb) 
+The program is not being run.
+(gdb) 
+The program is not being run.
+(gdb) gdb randclient
+Undefined command: "gdb".  Try "help".
+(gdb) bre[K[K[Kquit
+]0;tengmin1@nxsrv:/h/u3/c7/05/tengmin1/Desktop/tengmin1/lab10nxsrv:~/Desktop/tengmin1/lab10$ gdb ranc[Kdclient
+GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from randclient...done.
+(gdb) break main
+Breakpoint 1 at 0xc69: file randclient.c, line 24.
+(gdb) run 127.0.0.1
+Starting program: /h/u3/c7/05/tengmin1/Desktop/tengmin1/lab10/randclient 127.0.0.1
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffe708) at randclient.c:24
+24	    if (argc != 2) {
+(gdb) next
+29	    int soc = connect_to_server(PORT, argv[1]);
+(gdb) 
+31	    write_random_pieces(soc, MESSAGE, TIMES);
+(gdb) 
+33	    close(soc);
+(gdb) 
+34	    return 0;
+(gdb) 
+35	}
+(gdb) 
+__libc_start_main (main=0x555555554c5a <main>, argc=2, argv=0x7fffffffe708, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7fffffffe6f8) at ../csu/libc-start.c:344
+344	../csu/libc-start.c: No such file or directory.
+(gdb) 
+[Inferior 1 (process 56284) exited normally]
+(gdb) 
+The program is not being run.
+(gdb) 
+The program is not being run.
+(gdb) 
+The program is not being run.
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit
+]0;tengmin1@nxsrv:/h/u3/c7/05/tengmin1/Desktop/tengmin1/lab10nxsrv:~/Desktop/tengmin1/lab10$ exit
+exit
+
+Script done on 2020-03-27 19:13:12-0400
